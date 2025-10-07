@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C03EDAC2-59AE-494D-A1B4-302C59DF0CF8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BD05084B-7477-4B2C-A5F6-9FAD9FDCF139}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flow.AI.Core", "src\Flow.AI.Core\Flow.AI.Core.csproj", "{A33405A9-BE99-4331-9DD5-82250C0872E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A33405A9-BE99-4331-9DD5-82250C0872E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A33405A9-BE99-4331-9DD5-82250C0872E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A33405A9-BE99-4331-9DD5-82250C0872E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A33405A9-BE99-4331-9DD5-82250C0872E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A33405A9-BE99-4331-9DD5-82250C0872E3} = {C03EDAC2-59AE-494D-A1B4-302C59DF0CF8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83771BE1-C2D5-4CF3-B898-CD80DB8DC4D1}
+	EndGlobalSection
+EndGlobal
