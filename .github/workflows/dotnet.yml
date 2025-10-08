@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
     tags:
-      - 'v*'       # publish only when a version tag is pushed (e.g. v0.1.0)
+      - 'v*'     # publish only when pushing version tags (e.g. v0.1.0)
   pull_request:
     branches: [ master ]
 
@@ -12,29 +12,34 @@ jobs:
   build:
     name: Build & Test
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: 🧾 Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET
+      - name: ⚙️ Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
 
-      - name: Restore dependencies
+      - name: 📦 Restore dependencies
         run: dotnet restore
 
-      - name: Build solution
+      - name: 🏗️ Build solution
         run: dotnet build --configuration Release --no-restore
 
-      - name: Run tests with coverage
-        run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./TestResults
+      - name: 🧪 Run tests with coverage
+        run: |
+          dotnet test --no-build --configuration Release \
+            /p:CollectCoverage=true \
+            /p:CoverletOutputFormat=cobertura \
+            /p:CoverletOutput=./TestResults/coverage.cobertura.xml
 
-      - name: Upload coverage to Codecov
+      - name: ☁️ Upload coverage to Codecov
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./TestResults/**/coverage.cobertura.xml
+          files: ./TestResults/coverage.cobertura.xml
           flags: unittests
           name: codecov-flowaicore
           fail_ci_if_error: false
@@ -44,24 +49,25 @@ jobs:
     name: Publish NuGet Package
     needs: build
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, 'refs/tags/v')   # only run on tag push
+    if: startsWith(github.ref, 'refs/tags/v')   # only trigger when a version tag is pushed
+
     steps:
-      - name: Checkout repository
+      - name: 🧾 Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup .NET
+      - name: ⚙️ Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
 
-      - name: Restore dependencies
+      - name: 📦 Restore dependencies
         run: dotnet restore
 
-      - name: Build for release
+      - name: 🏗️ Build for release
         run: dotnet build --configuration Release --no-restore
 
-      - name: Pack NuGet package
+      - name: 📦 Pack NuGet package
         run: dotnet pack --configuration Release --no-build --output ./artifacts
 
-      - name: Publish to NuGet
+      - name: 🚀 Publish to NuGet
         run: dotnet nuget push ./artifacts/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
