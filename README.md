@@ -5,8 +5,9 @@
 # 🧱 Flow.AI.Core
 
 [![Build](https://github.com/AndrewClements84/Flow.AI.Core/actions/workflows/dotnet.yml/badge.svg)](https://github.com/AndrewClements84/Flow.AI.Core/actions/workflows/dotnet.yml)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Codecov](https://codecov.io/gh/AndrewClements84/Flow.AI.Core/branch/master/graph/badge.svg?token=<CODECOV_TOKEN>)](https://codecov.io/gh/AndrewClements84/Flow.AI.Core)
 [![NuGet](https://img.shields.io/nuget/v/Flow.AI.Core.svg)](https://www.nuget.org/packages/Flow.AI.Core/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 Core contracts and shared models for the **Flow.AI** ecosystem.  
 Used by TokenFlow.AI, PromptFlow.AI, ChatFlow.AI, and ReasonFlow.AI.
