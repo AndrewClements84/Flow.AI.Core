@@ -1,4 +1,6 @@
-﻿namespace Flow.AI.Core.Models
+﻿using System;
+
+namespace Flow.AI.Core.Models
 {
     /// <summary>
     /// Represents summarized token-level statistics for a model interaction.

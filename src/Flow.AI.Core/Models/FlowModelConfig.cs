@@ -10,6 +10,6 @@
         public string Provider { get; set; } = string.Empty;
         public string ModelName { get; set; } = string.Empty;
         public int TokenLimit { get; set; }
-        public string? Notes { get; set; }
+        public string Notes { get; set; }
     }
 }

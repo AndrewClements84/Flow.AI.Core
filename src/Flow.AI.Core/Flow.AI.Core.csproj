@@ -1,10 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <TargetFrameworks>net8.0;netstandard2.0</TargetFrameworks>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Flow.AI.Core</PackageId>
+    <Version>0.1.0</Version>
     <Authors>Andrew Clements</Authors>
     <Company>Andrew Clements</Company>
     <Description>Core contracts, interfaces, and models for the Flow.AI ecosystem.</Description>
@@ -12,6 +14,17 @@
     <RepositoryUrl>https://github.com/AndrewClements84/Flow.AI.Core</RepositoryUrl>
     <PackageProjectUrl>https://github.com/AndrewClements84/Flow.AI.Core</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+    <PackageOutputPath>../../artifacts</PackageOutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\assets\logo.png" Pack="true" PackagePath="" />
+    <None Include="../../README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
 
 </Project>
