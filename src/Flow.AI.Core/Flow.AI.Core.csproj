@@ -4,6 +4,14 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Andrew Clements</Authors>
+    <Company>Andrew Clements</Company>
+    <Description>Core contracts, interfaces, and models for the Flow.AI ecosystem.</Description>
+    <PackageTags>FlowAI;Core;Contracts;Shared;AI;TokenFlow;PromptFlow</PackageTags>
+    <RepositoryUrl>https://github.com/AndrewClements84/Flow.AI.Core</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/AndrewClements84/Flow.AI.Core</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
 </Project>
