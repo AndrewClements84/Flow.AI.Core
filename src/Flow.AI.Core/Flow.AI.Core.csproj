@@ -6,7 +6,7 @@
     <Nullable>disable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Flow.AI.Core</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Authors>Andrew Clements</Authors>
     <Company>Andrew Clements</Company>
     <Description>Core contracts, interfaces, and models for the Flow.AI ecosystem.</Description>
@@ -18,12 +18,13 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-
+	<PackageIcon>logo.png</PackageIcon>
     <PackageOutputPath>../../artifacts</PackageOutputPath>
+	<IncludeBuildOutput>true</IncludeBuildOutput>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\assets\logo.png" Pack="true" PackagePath="" />
+	<None Include="..\..\assets\logo.png" Pack="true" PackagePath="" />
     <None Include="../../README.md" Pack="true" PackagePath="" />
   </ItemGroup>
 
